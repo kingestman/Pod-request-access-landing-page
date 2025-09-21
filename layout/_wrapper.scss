@@ -1,0 +1,40 @@
+@use '../utils/' as u;
+
+.wrapper {
+    width: min(100% - 72px, 736px);
+    margin-inline: auto;
+    padding-block: 145px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70fr 214fr 17fr 96fr;
+}
+
+@include u.breakpoint(small) {
+    .wrapper {
+        padding-block: 156px;
+        margin-inline-start: clamp(
+            2.75rem,
+            -5.535714285714285rem + 17.261904761904763vw,
+            10rem
+        );
+
+        grid-template-columns: 1fr;
+        grid-template-rows:
+            minmax(u.rem(70), u.rem(160)) minmax(u.rem(214), u.rem(367))
+            minmax(u.rem(17), u.rem(92)) minmax(u.rem(93), u.rem(93));
+        max-width: 592px;
+        gap: 0;
+    }
+}
+
+@include u.breakpoint(medium) {
+    .wrapper {
+        margin-block: 153px;
+        padding-block: 0;
+        grid-template-columns: u.rem(736);
+        grid-template-rows:
+            minmax(u.rem(70), u.rem(160)) minmax(u.rem(214), u.rem(309))
+            minmax(u.rem(17), u.rem(92)) minmax(u.rem(93), u.rem(93));
+    }
+}

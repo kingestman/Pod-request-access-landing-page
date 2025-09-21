@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="dist/style.css" />
+        <title>Frontend Mentor | Pod request access landing page</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="container__background">
+                <div class="wrapper container__wrapper">
+                    <div class="container_logoblock">
+                        <img
+                            src="assets/desktop/logo.svg"
+                            alt=""
+                            width="135"
+                            height="56"
+                            class="container__logo"
+                        />
+                    </div>
+                    <div class="container__text">
+                        <h1 class="container__header">
+                            <span class="highlighted"
+                                >Publish your podcasts</span
+                            >
+                            everywhere.
+                        </h1>
+                        <p class="container__pharagraph">
+                            Upload your audio to Pod with a single click. We’ll
+                            then distribute your podcast to Spotify, Apple
+                            Podcasts, Google Podcasts, Pocket Casts and more!
+                        </p>
+                    </div>
+                    <div class="container__apps">
+                        <img
+                            src="assets/desktop/spotify.svg"
+                            alt=""
+                            width="69"
+                            height="29"
+                            class="container__spotify"
+                        />
+                        <img
+                            src="assets/desktop/apple-podcast.svg"
+                            alt=""
+                            width="78"
+                            height="29"
+                            class="container__apple"
+                        />
+                        <img
+                            src="assets/desktop/google-podcasts.svg"
+                            alt=""
+                            width="125"
+                            height="18"
+                            class="container__google"
+                        />
+                        <img
+                            src="assets/desktop/pocket-casts.svg"
+                            alt=""
+                            width="129"
+                            height="26"
+                            class="container__pocket"
+                        />
+                    </div>
+                    <div class="container__access">
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            class="container__email"
+                            placeholder="Email address"
+                        />
+                        <input
+                            type="button"
+                            value="Request Access"
+                            class="container__button"
+                            id="access-button"
+                        />
+                        <p class="container__errortext" id="errortext">
+                            Oops! Please check your email
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

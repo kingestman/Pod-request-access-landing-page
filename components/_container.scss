@@ -1,0 +1,169 @@
+@use '../utils/' as u;
+
+.container {
+    background-color: var(--bg-color);
+    background-image: url('../assets/mobile/image-host.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    @include u.breakpoint(small) {
+        background-image: url('../assets/tablet/Bitmap.png');
+        background-size: auto;
+        background-position: right top;
+    }
+
+    @include u.breakpoint(medium) {
+        background-image: url('../assets/desktop/Bitmap(1).png');
+        // background-size: auto;x
+        // background-position: right top;
+    }
+
+    &__logoblock {
+        padding-block-end: 40px;
+    }
+
+    &__logo {
+        width: 135px;
+        height: 56px;
+        z-index: 1;
+        margin: auto;
+
+        @include u.breakpoint(small) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            justify-self: left;
+            margin: 0;
+        }
+    }
+
+    &__text {
+        @include u.breakpoint(small) {
+            padding-block-start: 88px;
+            background-color: var(--bg-color);
+            padding-inline-end: 64px;
+        }
+
+        @include u.breakpoint(small) {
+            padding-block-start: 88px;
+            background-color: var(--bg-color);
+            padding-inline-end: 71px;
+        }
+    }
+
+    &__header {
+        text-align: center;
+        margin-block-end: 16px;
+
+        @include u.breakpoint(small) {
+            margin-block-end: 24px;
+            text-align: left;
+        }
+    }
+
+    &__pharagraph {
+        text-align: center;
+
+        @include u.breakpoint(small) {
+            text-align: left;
+        }
+    }
+
+    &__apps {
+        display: flex;
+        gap: 17.74px;
+        justify-content: center;
+        align-items: center;
+
+        @include u.breakpoint(small) {
+            gap: 40px;
+            grid-row: 4/5;
+            background-color: var(--bg-color);
+            justify-content: left;
+            align-items: end;
+        }
+    }
+
+    &__apps img {
+        display: inline;
+    }
+
+    &__spotify {
+        width: 56px;
+        height: 17px;
+
+        @include u.breakpoint(small) {
+            width: 96px;
+            height: 29px;
+        }
+    }
+
+    &__apple {
+        width: 45px;
+        height: 17px;
+
+        @include u.breakpoint(small) {
+            width: 78px;
+            height: 29px;
+        }
+    }
+
+    &__google {
+        width: 73px;
+        height: 11px;
+
+        @include u.breakpoint(small) {
+            width: 125px;
+            height: 18px;
+        }
+    }
+
+    &__pocket {
+        width: 76px;
+        height: 15px;
+
+        @include u.breakpoint(small) {
+            width: 129px;
+            height: 26px;
+        }
+    }
+
+    &__access {
+        @include u.breakpoint(small) {
+            padding-block-start: 40px;
+            grid-row: 3/4;
+            background-color: var(--bg-color);
+            position: relative;
+        }
+    }
+
+    &__email {
+        background-color: var(--input-field-bg-color);
+        border-radius: 28px;
+        border: none;
+        width: 100%;
+        margin-block-end: 8px;
+        padding-block: 8px;
+        padding-left: 28px;
+        @include u.breakpoint(small) {
+            padding-block: 12px;
+            max-width: u.rem(448);
+            margin-block-end: 0;
+        }
+    }
+
+    &__errortext {
+        font-size: u.rem(12);
+        font-weight: bold;
+        color: #fb3e3e;
+        text-align: center;
+        margin-block-start: 8px;
+        display: none;
+
+        @include u.breakpoint(small) {
+            width: fit-content;
+            margin-inline-start: 32px;
+        }
+    }
+}

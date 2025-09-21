@@ -1,0 +1,59 @@
+@use '../utils' as u;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.045801526717557rem + 4.071246819338422vw, 3rem);
+    line-height: 120%;
+    color: var(--h1-color);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.highlighted {
+    @extend h1;
+    color: var(--h1-highlighted-color);
+}
+
+p {
+    color: var(--p-color);
+    font-size: 0.875rem;
+    font-size: clamp(
+        0.875rem,
+        0.6364503816793893rem + 1.0178117048346056vw,
+        1.125rem
+    );
+    font-weight: 300;
+    line-height: 150%;
+}
+
+input[type='email']:placeholder-shown {
+    font-size: u.rem(14);
+    font-weight: bold;
+    line-height: 200%;
+    color: var(--input-field-placeholder-color);
+}
+
+input[type='email'] {
+    color: var(--input-field-content-color);
+    font-size: u.rem(14);
+    font-weight: bold;
+    line-height: 200%;
+}
+
+input[type='button'] {
+    color: var(--button-text-color);
+    font-size: u.rem(14);
+    font-weight: bold;
+    line-height: 200%;
+}

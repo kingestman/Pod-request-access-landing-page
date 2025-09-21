@@ -1,0 +1,29 @@
+@use '../utils/' as u;
+
+input[type='button'] {
+    background-color: var(--button-bg-color);
+    border-radius: u.rem(28);
+    padding: u.rem(8) u.rem(97);
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.8s ease-in-out;
+    border: none;
+
+    &:hover {
+        background-color: var(--button-bg-color-hover);
+    }
+
+    @include u.breakpoint(small) {
+        max-width: u.rem(173);
+        display: inline;
+        padding: u.rem(8) u.rem(32);
+        position: absolute;
+        right: 0;
+        transform: translate(-150px, 4px);
+    }
+
+    @include u.breakpoint(medium) {
+        transform: translate(-293px, 4px);
+    }
+}
